@@ -1,0 +1,24 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/joern/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+export PATH=$PATH:~/.local/bin
+
+# Configure stow
+export STOW_DIR=$HOME/dotfiles
+alias stow="stow --dotfiles"
+
+alias ll="ls -l --color=auto"
+alias grep="grep --color=auto"
+alias n="~/.local/bin/nvim"
+alias vi="~/.local/bin/nvim"
+
+eval "$(starship init zsh)"
