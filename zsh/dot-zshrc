@@ -30,8 +30,6 @@ alias grep="grep --color=auto"
 alias n="~/.local/bin/nvim"
 alias vi="~/.local/bin/nvim"
 
-# Set up zoxide to move between folders efficiently
-eval "$(zoxide init zsh)"
 
 # Configure starship
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
