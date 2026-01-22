@@ -9,6 +9,17 @@ fi
 # source/load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
+# Home and End keys
+bindkey '^[[H' beginning-of-line    # Home
+bindkey '^[[F' end-of-line          # End
+
+# Delete and arrows (just in case)
+bindkey '^[[3~' delete-char         # Delete
+bindkey '^[[A' up-line-or-history   # Up
+bindkey '^[[B' down-line-or-history # Down
+
+bindkey "^R" history-incremental-pattern-search-backward
+
 # zsh plugins (optimized loading)
 zinit wait lucid for \
     zsh-users/zsh-autosuggestions
