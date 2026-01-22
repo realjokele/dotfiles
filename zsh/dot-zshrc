@@ -1,14 +1,25 @@
-# Lines configured by zsh-newuser-install
+# install zinit plugins manager
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+
+# install if doesn't exist
+if [ ! -d $ZINIT_HOME ]; then
+       	mkdir -p "$(dirname $ZINIT_HOME)"
+	git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+fi
+# source/load zinit
+source "${ZINIT_HOME}/zinit.zsh"
+
+# zsh plugins (optimized loading)
+zinit wait lucid for \
+    zsh-users/zsh-autosuggestions
+bindkey '^ ' autosuggest-accept
+export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename '/home/joern/.zshrc'
 
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
+autoload -U compinit && compinit
 
 # Move to directories without cd
 setopt autocd
@@ -16,7 +27,10 @@ setopt autocd
 # Add / to ..
 zstyle ':completion:*' special-dirs true
 zstyle ':completion:*' menu select
-
+zstyle :compinstall filename '/home/joern/.zshrc'
+# completion styling
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 # Initialize completion
 autoload -U compinit; compinit
@@ -31,7 +45,7 @@ alias ll="ls -l --color=auto"
 alias grep="grep --color=auto"
 alias n="~/.local/bin/nvim"
 alias vi="~/.local/bin/nvim"
-
+alias tm="tmuxifier"
 
 # Configure starship
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
