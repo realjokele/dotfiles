@@ -10,6 +10,15 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# Move to directories without cd
+setopt autocd
+
+# Add / to ..
+zstyle ':completion:*' special-dirs true
+
+# Initialize completion
+autoload -U compinit; compinit
+
 export PATH=$PATH:~/.local/bin
 
 # Configure stow
@@ -20,6 +29,9 @@ alias ll="ls -l --color=auto"
 alias grep="grep --color=auto"
 alias n="~/.local/bin/nvim"
 alias vi="~/.local/bin/nvim"
+
+# Set up zoxide to move between folders efficiently
+eval "$(zoxide init zsh)"
 
 # Configure starship
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
