@@ -46,7 +46,7 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 # Initialize completion
 autoload -U compinit; compinit
 
-export PATH=$PATH:~/.local/bin
+export PATH=~/.local/bin:$PATH
 
 # Configure stow
 export STOW_DIR=$HOME/dotfiles
