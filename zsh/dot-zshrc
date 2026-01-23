@@ -54,8 +54,8 @@ alias stow="stow --dotfiles"
 
 alias ll="ls -l --color=auto"
 alias grep="grep --color=auto"
-alias n="~/.local/bin/nvim"
-alias vi="~/.local/bin/nvim"
+alias n="nvim"
+alias vi="nvim"
 alias tm="tmuxifier"
 
 # Configure starship
