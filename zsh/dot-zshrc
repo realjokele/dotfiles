@@ -9,6 +9,12 @@ fi
 # source/load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
+# zsh plugins (optimized loading)
+zinit wait lucid for \
+    zsh-users/zsh-autosuggestions
+bindkey '^ ' autosuggest-accept
+export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
 # Home and End keys
 bindkey '^[[H' beginning-of-line    # Home
 bindkey '^[[F' end-of-line          # End
@@ -20,13 +26,7 @@ bindkey '^[[B' down-line-or-history # Down
 
 bindkey "^R" history-incremental-pattern-search-backward
 
-# zsh plugins (optimized loading)
-zinit wait lucid for \
-    zsh-users/zsh-autosuggestions
-bindkey '^ ' autosuggest-accept
-export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-
-HISTFILE=~/.histfile
+ISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 
