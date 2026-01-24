@@ -71,9 +71,9 @@ vim.keymap.set("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
 vim.keymap.set("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 vim.keymap.set("n", "[b", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
 vim.keymap.set("n", "]b", "<cmd>bnext<cr>", { desc = "Next Buffer" })
-vim.keymap.set("n", "<leader>bd", "<cmd>bdelete<CR>", { desc = "Delete Buffer" })
+vim.keymap.set("n", "<leader>bx", "<cmd>bdelete<CR>", { desc = "Delete Buffer" })
 vim.keymap.set("n", "<leader>bo", delete_other_buffers, { desc = "Delete Other Buffers" })
-vim.keymap.set("n", "<leader>bD", "<cmd>:bd<cr>", { desc = "Delete Buffer and Window" })
+vim.keymap.set("n", "<leader>bX", "<cmd>:bd<cr>", { desc = "Delete Buffer and Window" })
 
 -- Open Lazy UI
 vim.keymap.set("n", "<leader>pl", "<cmd>Lazy<cr>", { desc = "Lazy UI" })
