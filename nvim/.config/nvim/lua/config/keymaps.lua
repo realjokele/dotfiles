@@ -86,3 +86,6 @@ vim.keymap.set("n", "<leader>pi", "<cmd>LspInfo<cr>", { desc = "LSP Info" })
 vim.keymap.set("n", "<leader>pc", function()
 	require("snacks").picker.colorschemes()
 end, { desc = "Colorschemes" }) -- or Snacks.picker.colorschemes()
+
+-- Maps <leader> tab to switch to the previous buffer
+vim.keymap.set("n", "<leader>#", "<cmd>b#<CR>", { desc = "Switch to previous buffer" })
