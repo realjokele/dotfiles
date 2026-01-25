@@ -57,6 +57,7 @@ alias grep="grep --color=auto"
 alias n="nvim"
 alias vi="nvim"
 alias tm="tmuxifier"
+alias c="clear"
 
 # Configure starship
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
