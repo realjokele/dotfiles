@@ -64,6 +64,16 @@ vim.opt.splitright = true
 -- vim.opt.lazyredraw = true
 
 -----------------------------------------------------------
+-- Matching brackets
+-----------------------------------------------------------
+
+vim.g.loaded_matchparen = nil
+vim.cmd("runtime plugin/matchparen.vim")
+
+-- This makes the matching bracket bold with a bright background
+vim.api.nvim_set_hl(0, "MatchParen", { fg = "#282c34", bg = "#ff9e64", bold = true })
+
+-----------------------------------------------------------
 -- Search Config
 -----------------------------------------------------------
 -- Enable highlighting search in progress
