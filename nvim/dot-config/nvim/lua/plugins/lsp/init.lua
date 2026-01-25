@@ -88,9 +88,9 @@ return {
 						vim.lsp.buf.code_action,
 						{ buffer = ev.buf, desc = "Code Actions" }
 					)
-					vim.keymap.set("n", "gr", function()
-						require("snacks").picker.lsp_references()
-					end, { buffer = ev.buf, desc = "References" })
+					-- vim.keymap.set("n", "gr", function()
+					-- 	require("snacks").picker.lsp_references()
+					-- end, { buffer = ev.buf, desc = "References" })
 				end,
 			})
 		end,
