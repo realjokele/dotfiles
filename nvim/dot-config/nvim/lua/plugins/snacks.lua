@@ -155,7 +155,7 @@ return {
 			desc = "Goto Declaration",
 		},
 		{
-			"gr",
+			"grr",
 			function()
 				require("snacks").picker.lsp_references()
 			end,

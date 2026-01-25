@@ -52,6 +52,7 @@ return {
 			{ "<leader>g", group = "Git", icon = { icon = "", color = "yellow" } },
 			{ "<leader>c", group = "LSP", icon = { icon = "", color = "yellow" } },
 			{ "gc", group = "Comment", icon = { icon = "󰆈", color = "orange" } },
+			{ "gr", group = "LSP References", icon = { icon = "", color = "orange" } },
 			{ "<leader>p", group = "System", icon = { icon = "", color = "orange" } },
 
 			-- Dynamic Toggles Group
