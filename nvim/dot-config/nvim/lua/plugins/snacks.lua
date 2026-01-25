@@ -231,6 +231,16 @@ return {
 						},
 					},
 				},
+				win = {
+					input = {
+						keys = {
+							-- Open in vertical split
+							["<a-v>"] = { "edit_vsplit", mode = { "i", "n" } },
+							-- Open in horizontal split
+							["<a-h>"] = { "edit_split", mode = { "i", "n" } },
+						},
+					},
+				},
 			},
 		})
 	end,
