@@ -1,8 +1,28 @@
 return {
 	{
-		{ "nvim-mini/mini.ai", version = "*", opts = {} },
+		{
+			"nvim-mini/mini.ai",
+			version = "*",
+			config = function()
+				require("mini.ai").setup()
+			end,
+		},
 		{ "nvim-mini/mini.pairs", version = "*", opts = {} },
-		-- { "nvim-mini/mini.surround", version = "*", opts = {} },
+		{
+			"nvim-mini/mini.surround",
+			version = "*",
+			config = function()
+				require("mini.surround").setup({
+					mappings = {
+						add = "gsa", -- Avoids conflict with Flash 's'
+						delete = "gsd",
+						replace = "gsr",
+					},
+					-- This search_method helps find the best "block" to surround
+					search_method = "cover_or_next",
+				})
+			end,
+		},
 		{ "nvim-mini/mini.cursorword", version = "*", opts = { delay = 500 } },
 		{
 			"nvim-mini/mini.indentscope",
@@ -44,7 +64,7 @@ return {
 				})
 			end,
 		},
-		{ "nvim-mini/mini.starter", version = false, opts = {
+		{ "nvim-mini/mini.starter", version = "*", opts = {
 			footer = "",
 		} },
 	},

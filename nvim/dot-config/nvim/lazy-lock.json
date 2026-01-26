@@ -20,6 +20,7 @@
   "mini.pairs": { "branch": "main", "commit": "d5a29b6254dad07757832db505ea5aeab9aad43a" },
   "mini.starter": { "branch": "main", "commit": "8ee6ce6a4c9be47682516908557cc062c4d595a2" },
   "mini.statusline": { "branch": "main", "commit": "3e96596ebe51b899874d8174409cdc4f3c749d9a" },
+  "mini.surround": { "branch": "main", "commit": "88c52297ed3e69ecf9f8652837888ecc727a28ee" },
   "nvim-lspconfig": { "branch": "master", "commit": "92ee7d42320edfbb81f3cad851314ab197fa324a" },
   "nvim-treesitter": { "branch": "main", "commit": "ec034813775d7e2974c7551c8c34499a828963f8" },
   "nvim-treesitter-context": { "branch": "master", "commit": "64dd4cf3f6fd0ab17622c5ce15c91fc539c3f24a" },
