@@ -43,7 +43,7 @@ return {
 				})
 			end,
 		},
-		{ "nvim-mini/mini.starter", version = "*", opts = {
+		{ "nvim-mini/mini.starter", version = false, opts = {
 			footer = "",
 		} },
 	},
