@@ -2,6 +2,7 @@ return {
 	{
 		{ "nvim-mini/mini.ai", version = "*", opts = {} },
 		{ "nvim-mini/mini.pairs", version = "*", opts = {} },
+		-- { "nvim-mini/mini.surround", version = "*", opts = {} },
 		{ "nvim-mini/mini.cursorword", version = "*", opts = { delay = 500 } },
 		{
 			"nvim-mini/mini.indentscope",
