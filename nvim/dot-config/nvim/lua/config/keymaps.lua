@@ -1,8 +1,13 @@
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
+-- Exit insert mode
 vim.keymap.set("i", "jk", "<ESC>", { silent = true })
 vim.keymap.set("i", "jj", "<ESC>", { silent = true })
+
+-- Move cursor and center on screen
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Move cursor up and center" })
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Move cursor down and center" })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
