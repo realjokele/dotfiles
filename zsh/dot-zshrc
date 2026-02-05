@@ -16,8 +16,8 @@ bindkey '^ ' autosuggest-accept
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 # Home and End keys
-bindkey '^[[H' beginning-of-line    # Home
-bindkey '^[[F' end-of-line          # End
+bindkey "\e[1~" beginning-of-line
+bindkey "\e[4~" end-of-line
 
 # Delete and arrows (just in case)
 bindkey '^[[3~' delete-char         # Delete
