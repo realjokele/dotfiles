@@ -15,11 +15,12 @@ return {
 					python = { "isort", "black" },
 					-- You can customize some of the format options for the filetype (:help conform.format)
 					-- Conform will run the first available formatter
-					javascript = { "prettierd", "prettier", stop_after_first = true },
-					javascriptreact = { "prettierd", "prettier", stop_after_first = true },
-					typescript = { "prettierd", "prettier", stop_after_first = true },
-					typescriptreact = { "prettierd", "prettier", stop_after_first = true },
-					json = { "prettierd", "prettier", stop_after_first = true },
+					javascript = { "prettier", stop_after_first = true },
+					javascriptreact = { "prettier", stop_after_first = true },
+					typescript = { "prettier", stop_after_first = true },
+					typescriptreact = { "prettier", stop_after_first = true },
+					json = { "prettier", stop_after_first = true },
+					css = { "prettier", stop_after_first = true },
 				},
 			})
 		end,
