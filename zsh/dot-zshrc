@@ -48,6 +48,8 @@ autoload -U compinit; compinit
 
 export PATH=~/.local/bin:$PATH
 
+export LC_ALL=C.UTF-8
+
 # Configure stow
 export STOW_DIR=$HOME/dotfiles
 alias stow="stow --dotfiles"
