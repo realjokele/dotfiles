@@ -1,0 +1,6 @@
+require("plugins.colorscheme")
+require("plugins.mason")
+require("plugins.mini")
+require("plugins.oil")
+require("plugins.conform")
+require("plugins.blink")

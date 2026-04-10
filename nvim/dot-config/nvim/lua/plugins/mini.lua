@@ -7,7 +7,7 @@ return {
 				require("mini.ai").setup()
 			end,
 		},
-		{ "nvim-mini/mini.pairs", version = "*", opts = {} },
+		-- { "nvim-mini/mini.pairs", version = "*", opts = {} },
 		{
 			"nvim-mini/mini.surround",
 			version = "*",
