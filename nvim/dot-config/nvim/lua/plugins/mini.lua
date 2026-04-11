@@ -1,71 +1,17 @@
-return {
-	{
-		{
-			"nvim-mini/mini.ai",
-			version = "*",
-			config = function()
-				require("mini.ai").setup()
-			end,
-		},
-		-- { "nvim-mini/mini.pairs", version = "*", opts = {} },
-		{
-			"nvim-mini/mini.surround",
-			version = "*",
-			config = function()
-				require("mini.surround").setup({
-					mappings = {
-						add = "gsa", -- Avoids conflict with Flash 's'
-						delete = "gsd",
-						replace = "gsr",
-					},
-					-- This search_method helps find the best "block" to surround
-					search_method = "cover_or_next",
-				})
-			end,
-		},
-		{ "nvim-mini/mini.cursorword", version = "*", opts = { delay = 500 } },
-		{
-			"nvim-mini/mini.indentscope",
-			version = "*",
-			opts = {},
-			config = function()
-				local indentscope = require("mini.indentscope")
-				indentscope.setup({
-					draw = {
-						animation = indentscope.gen_animation.none(),
-					},
-				})
-			end,
-		},
-		{
-			"nvim-mini/mini-git",
-			version = "*",
-			opts = {},
-			config = function()
-				require("mini.git").setup()
-			end,
-		},
-		{
-			"nvim-mini/mini.diff",
-			version = "*",
-			config = function()
-				vim.api.nvim_set_hl(0, "MiniDiffSignAdd", { fg = "#A6E22E", bold = true }) -- Lime Green
-				vim.api.nvim_set_hl(0, "MiniDiffSignChange", { fg = "#66D9EF", bold = true }) -- Sky Blue
-				vim.api.nvim_set_hl(0, "MiniDiffSignDelete", { fg = "#F92672", bold = true }) -- Electric Pink/Red
-				require("mini.diff").setup({
-					view = {
-						style = "sign",
-						signs = {
-							add = "+",
-							change = "|",
-							delete = "-",
-						},
-					},
-				})
-			end,
-		},
-		{ "nvim-mini/mini.starter", version = "*", opts = {
-			footer = "",
-		} },
-	},
-}
+vim.pack.add({
+	"https://github.com/nvim-mini/mini.starter",
+	"https://github.com/nvim-mini/mini.pairs",
+	"https://github.com/nvim-mini/mini.icons",
+})
+
+-- Start screen
+require("mini.starter").setup({
+	footer = "",
+})
+
+-- Autopairs
+require("mini.pairs").setup()
+
+-- Icon provider, replace nvim_web_devicons
+require("mini.icons").setup()
+MiniIcons.mock_nvim_web_devicons()
