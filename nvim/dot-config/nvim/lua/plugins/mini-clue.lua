@@ -52,6 +52,9 @@ miniclue.setup({
 		{ mode = "n", keys = "<Leader>g", desc = "+Git" },
 		{ mode = "x", keys = "<Leader>g", desc = "+Git" },
 		{ mode = "n", keys = "<Leader>w", desc = "+Windows" },
+		{ mode = "n", keys = "<Leader>c", desc = "+Code Actions" },
+		{ mode = "n", keys = "<Leader>p", desc = "+System" },
+		{ mode = "n", keys = "<Leader>s", desc = "+Search" },
 		-- Enhance this by adding descriptions for <Leader> mapping groups
 		miniclue.gen_clues.square_brackets(),
 		miniclue.gen_clues.builtin_completion(),

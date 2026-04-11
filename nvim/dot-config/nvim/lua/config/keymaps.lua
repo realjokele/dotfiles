@@ -80,8 +80,6 @@ vim.keymap.set("n", "<leader>bx", "<cmd>bdelete<CR>", { desc = "Delete Buffer" }
 vim.keymap.set("n", "<leader>bo", delete_other_buffers, { desc = "Delete Other Buffers" })
 vim.keymap.set("n", "<leader>bX", "<cmd>:bd<cr>", { desc = "Delete Buffer and Window" })
 
--- Open Lazy UI
-vim.keymap.set("n", "<leader>pl", "<cmd>Lazy<cr>", { desc = "Lazy UI" })
 -- Open Mason UI
 vim.keymap.set("n", "<leader>pm", "<cmd>Mason<cr>", { desc = "Mason UI" })
 
