@@ -1,3 +1,4 @@
+require("plugins.fidget")
 require("plugins.colorscheme")
 require("plugins.mason")
 require("plugins.mini")
