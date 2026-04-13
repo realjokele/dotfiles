@@ -60,6 +60,9 @@ vim.opt.scrolloff = 8
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
+-- Sets the default border for all floating windows
+vim.opt.winborder = "rounded"
+
 -- Faster scrolling
 -- vim.opt.lazyredraw = true
 
