@@ -1,6 +1,5 @@
 vim.pack.add({
 	"https://github.com/nvim-mini/mini.starter",
-	"https://github.com/nvim-mini/mini.pairs",
 	"https://github.com/nvim-mini/mini.icons",
 	"https://github.com/nvim-mini/mini-git",
 	"https://github.com/nvim-mini/mini.diff",
@@ -11,9 +10,6 @@ vim.pack.add({
 require("mini.starter").setup({
 	footer = "",
 })
-
--- Autopairs
-require("mini.pairs").setup()
 
 require("mini.comment").setup()
 
