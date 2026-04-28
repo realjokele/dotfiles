@@ -4,6 +4,7 @@ vim.pack.add({
 	"https://github.com/nvim-mini/mini.icons",
 	"https://github.com/nvim-mini/mini-git",
 	"https://github.com/nvim-mini/mini.diff",
+	"https://github.com/nvim-mini/mini.comment",
 })
 
 -- Start screen
@@ -13,6 +14,8 @@ require("mini.starter").setup({
 
 -- Autopairs
 require("mini.pairs").setup()
+
+require("mini.comment").setup()
 
 -- Icon provider, replace nvim_web_devicons
 require("mini.icons").setup()

@@ -21,6 +21,9 @@ vim.opt.autoindent = true
 -- Prevent line wrapping
 vim.opt.breakindent = true
 
+-- Line wrapping on words
+vim.opt.linebreak = true
+
 -- Disable text wrap
 vim.opt.wrap = false
 

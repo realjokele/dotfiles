@@ -33,6 +33,10 @@
       "rev": "f8a11789cf34a7bae396dc0f828d06cdb5066793",
       "src": "https://github.com/nvim-mini/mini.clue"
     },
+    "mini.comment": {
+      "rev": "8e5ff3ed3cc0e8f216617aae01020c00c20f7a87",
+      "src": "https://github.com/nvim-mini/mini.comment"
+    },
     "mini.diff": {
       "rev": "ab11575a6c147ecfba894d676d0c93e855021d34",
       "src": "https://github.com/nvim-mini/mini.diff"
@@ -72,6 +76,10 @@
     "snacks.nvim": {
       "rev": "ad9ede6a9cddf16cedbd31b8932d6dcdee9b716e",
       "src": "https://github.com/folke/snacks.nvim"
+    },
+    "ts-comments.nvim": {
+      "rev": "123a9fb12e7229342f807ec9e6de478b1102b041",
+      "src": "https://github.com/folke/ts-comments.nvim"
     },
     "ts-forge.nvim": {
       "rev": "f915063a0da757d5f21b8d431cfd3f794b9f2521",
