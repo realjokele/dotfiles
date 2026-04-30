@@ -1,0 +1,11 @@
+theme = Catppuccin Mocha
+window-width = 120
+window-height = 40
+
+# Add some padding
+window-padding-balance = true
+window-padding-x = 10
+window-padding-y = 0,10
+
+copy-on-select = false
+
