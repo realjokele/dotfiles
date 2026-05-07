@@ -97,6 +97,17 @@ vim.diagnostic.config({
 })
 
 -----------------------------------------------------------
+-- Show Errors in a Floating Window
+-----------------------------------------------------------
+-- Pressing 'gl' will show the full error in a floating window
+vim.keymap.set("n", "gl", vim.diagnostic.open_float)
+
+-- Optional: Configure the floating window border
+vim.diagnostic.config({
+	float = { border = "rounded" },
+})
+
+-----------------------------------------------------------
 -- Floating windows
 -----------------------------------------------------------
 vim.lsp.util.open_floating_preview = (function(orig)
