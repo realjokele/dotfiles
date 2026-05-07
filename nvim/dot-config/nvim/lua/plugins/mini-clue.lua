@@ -26,6 +26,10 @@ miniclue.setup({
 		{ mode = "n", keys = "g" },
 		{ mode = "x", keys = "g" },
 
+		-- `s` key
+		{ mode = "n", keys = "s" },
+		{ mode = "x", keys = "s" },
+
 		-- Marks
 		{ mode = "n", keys = "'" },
 		{ mode = "n", keys = "`" },
