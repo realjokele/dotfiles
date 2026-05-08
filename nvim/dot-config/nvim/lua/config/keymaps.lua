@@ -41,17 +41,17 @@ vim.keymap.set("n", "<leader>wx", "<cmd>close<CR>", { desc = "Close current spli
 
 -- Disable arrow keys in all modes
 -- local modes = { 'n', 'i', 'v', 'c', 't', 'o', 's', 'x' } -- All possible modes
-local modes = { "n", "i", "v", "o", "t", "s", "x" } -- All possible modes
-local arrows = { "<Up>", "<Down>", "<Left>", "<Right>" }
+-- local modes = { "n", "i", "v", "o", "t", "s", "x" } -- All possible modes
+-- local arrows = { "<Up>", "<Down>", "<Left>", "<Right>" }
+--
+-- for _, mode in ipairs(modes) do
+-- 	for _, key in ipairs(arrows) do
+-- 		vim.keymap.set(mode, key, "<Nop>", { noremap = true, silent = true })
+-- 	end
+-- end
 
-for _, mode in ipairs(modes) do
-	for _, key in ipairs(arrows) do
-		vim.keymap.set(mode, key, "<Nop>", { noremap = true, silent = true })
-	end
-end
-
-local enabledModes = { "i", "c", "o", "t", "s", "x" }
 -- Map Alt + hjkl in Insert mode
+local enabledModes = { "i", "c", "o", "t", "s", "x" }
 for _, mode in ipairs(enabledModes) do
 	vim.keymap.set(mode, "<A-h>", "<Left>", { noremap = true, silent = true })
 	vim.keymap.set(mode, "<A-j>", "<Down>", { noremap = true, silent = true })
