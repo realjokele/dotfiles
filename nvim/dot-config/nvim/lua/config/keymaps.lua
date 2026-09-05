@@ -11,7 +11,22 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Move cursor down and center" }
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
-vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+vim.keymap.set("n", "<Esc>", function()
+	-- Close any floating windows (e.g. LSP hover/diagnostic popups) first.
+	local closed_float = false
+	for _, win in ipairs(vim.api.nvim_tabpage_list_wins(0)) do
+		local config = vim.api.nvim_win_get_config(win)
+		if config.relative ~= "" then
+			vim.api.nvim_win_close(win, false)
+			closed_float = true
+		end
+	end
+
+	-- Only clear search highlighting if there was no floating window to close.
+	if not closed_float then
+		vim.cmd("nohlsearch")
+	end
+end, { desc = "Close floating windows or clear search highlight" })
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
